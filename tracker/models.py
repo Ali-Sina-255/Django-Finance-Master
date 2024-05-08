@@ -11,9 +11,9 @@ class Category(models.Model):
     def __str__(self) -> str:
         return self.name
     
-
 # Transaction can be ether Income or Expense
 # Has a amount
+
 class Transaction(models.Model):
     TRANSACTION_TYPE_CHOICE = (
         ('Income', 'Income'),
@@ -27,4 +27,5 @@ class Transaction(models.Model):
 
     def __str__(self) -> str:
         return f'{self.type} of {self.amount} on {self.category} by {self.user}'
-    
+    class Meta:
+        ordering = ['-date']

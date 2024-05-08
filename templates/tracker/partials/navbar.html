@@ -16,7 +16,7 @@
         
         {% if user.is_authenticated %}
             <li>
-                <a href="" 
+                <a href="{% url 'transactions-list' %}" 
                     class="block py-2 pl-3 pr-4 text-white rounded md:p-0" 
                     aria-current="page">
                         My Transactions
